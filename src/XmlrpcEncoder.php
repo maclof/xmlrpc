@@ -486,6 +486,7 @@ class XmlrpcEncoder {
     private static function catchStruct($value) {
 
         $values = count($value);
+        if ($values == 0) return true;
 
         for ( $i = 0; $i < $values; $i++ ) if ( !array_key_exists($i, $value) ) return true;
 
